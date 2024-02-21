@@ -131,8 +131,9 @@ st.pyplot(fig)
 
 
 st.write("""### Тепловая карта зависимостей численных переменных""")
+
 fig, ax = plt.subplots(figsize=(10, 6))
-af = tips.drop(["sex","smoker","day","time","tipas%total","sumbyday","time_order"], axis=1)
+af = tips.drop(["sex", "smoker", "day", "time", "time_order"], axis=1)
 sns.heatmap(af.corr())
 st.pyplot(fig)
 
