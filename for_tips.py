@@ -132,7 +132,8 @@ st.pyplot(fig)
 
 st.write("""### Тепловая карта зависимостей численных переменных""")
 fig, ax = plt.subplots(figsize=(10, 6))
-heatmap = sns.heatmap(tips.corr(), annot=True, cmap="crest", linewidths=0.5)
+af = tips.drop(["sex","smoker","day","time","tipas%total","sumbyday","time_order"], axis=1)
+sns.heatmap(af.corr())
 st.pyplot(fig)
 
 st.success('DONE DONE DONE!', icon="✅")
