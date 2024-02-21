@@ -69,7 +69,7 @@ fig.update_layout(plot_bgcolor='lightgray', paper_bgcolor='darkslategrey')
 fig.update_traces(marker=dict(line=dict(width=0.5, color='black')))
 st.plotly_chart(fig)
 
-st.write("""### График, показывающий вязь между днем недели и размером счета""")
+st.write("""### График, показывающий связь между днем недели и размером счета""")
 fig = px.scatter(tips, x="total_bill", y="tip", color="day", facet_col="day", facet_col_wrap=2, height=500)
 fig.update_layout(paper_bgcolor="#f5f5f5", plot_bgcolor="#ffffff", margin=dict(l=20, r=20, b=20, t=20))
 st.plotly_chart(fig)
